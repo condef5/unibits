@@ -1,0 +1,26 @@
+.cu-red-text.bright {
+    color: #ec2337 !important;
+}
+
+$colors: (
+	alice-blue: #f3f7fa,
+	fog: #2d2457,
+	grey-suit: #95949b,
+	licorice: #323a4b,
+	pattens-blue: #d1dde9,
+	pattens-dark: #dbe7f1, 
+	gree-noob: #65ca98,
+	white: #fff
+);
+
+@each $color,$value in $colors{
+	.#{$color}{
+		background-color:$value;
+		&:hover{
+			background-color: darken($value,.5);
+		}
+	}
+	.#{$color}-text{
+		color:$value;
+	} 
+}
